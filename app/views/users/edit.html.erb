@@ -28,8 +28,7 @@
 <%
 =end%>
 
-
-<h1>Create new User</h1>
+<h1>Edit User</h1>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -44,8 +43,10 @@
 <% end %>
 
 <%= form_with model: @user do |form| %>
-  Username: <%= form.text_field :username, :value => 'your username here'  %> <br>
-  Email: <%= form.email_field :email, :value => 'example@example.com' %> <br>
+  Username: <%= form.text_field :username %> <br>
+  Email: <%= form.email_field :email %> <br>
   Password: <%= form.password_field :password %> <br>
   <%= form.submit%>
 <% end %>
+
+
